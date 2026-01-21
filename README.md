@@ -1,7 +1,6 @@
 # Stochastic Tropical Cyclone Model (IRIS Foundations)
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Academic_Research-orange)
 
 **Author:** Siméon Vareilles  
@@ -33,7 +32,7 @@ Tropical-Cyclone-Stochastic-Model/
 │   ├── LMItracks.pkl           # Historical storm tracks
 │   ├── XX, XX_fs, XX_nr...     # Transition probability matrices
 │   ├── mix_lognorm_ratio...    # Ratio distributions (Near Land/Sea)
-│   └── mpi_out/                # FOLDER: Contains NetCDF MPI maps (mpi_NA.nc, etc.)
+│   └── mpi_out/                # FOLDER: Contains NetCDF MPI maps 
 ├── analysis/                   # Validation and Profiling
 │   ├── Intensity_Decay_Validation.ipynb
 │   ├── RMW_R34_distributions.ipynb
