@@ -1,0 +1,20 @@
+# Core Scientific Libraries
+numpy
+pandas
+matplotlib
+scipy
+
+# Geospatial & Data Handling
+netCDF4
+global-land-mask
+xarray
+shapely
+geopy
+
+# Statistical Models
+statsmodels
+patsy
+
+# Utilities
+tqdm
+mpmath
