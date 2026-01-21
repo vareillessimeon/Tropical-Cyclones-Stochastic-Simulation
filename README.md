@@ -1,17 +1,43 @@
-# Tropical Cyclones Stochastic Simulation
-This repository contains a probabilistic model for simulating **Tropical Cyclone (TC)** tracks and intensity evolution. It uses historical data from **IBTrACS** and environmental parameters (Maximum Potential Intensity) to generate synthetic storm trajectories and model their wind speed decay upon landfall.
+# Stochastic Tropical Cyclone Model (IRIS Foundations)
 
-## Key Features
-* **Stochastic Track Generation:** Simulates storm deviations and trajectories based on historical statistics.
-* **Intensity Modeling:** Implements wind speed decay models considering land interaction (using `global_land_mask`).
-* **Data Integration:** Combines IBTrACS best-track data with MPI (Maximum Potential Intensity) climatology.
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Academic_Research-orange)
 
-## Repository Structure
-* **`Final_Model.ipynb`**: The core simulation kernel. Loads historical tracks, fits statistical distributions (Beta, Lognormal, Burr), and generates synthetic storm realizations.
+**Author:** Siméon Vareilles  
+**Institution:** Imperial College London (Space and Atmospheric Physics Group)  
+**Supervisor:** Prof. Ralf Toumi  
+**Project:** MSc Dissertation (Awarded Distinction)
 
-## Setup & Usage
+---
 
-### 1. Prerequisites
-Install the required Python scientific libraries:
-```bash
-pip install -r requirements.txt
+## 🌪️ Overview
+
+This repository contains the source code for the **Stochastic Tropical Cyclone Model**, developed to assess cyclone risk by generating synthetic storms based on historical statistics and physical constraints.
+
+Unlike purely statistical models, this approach integrates the **Maximum Potential Intensity (MPI)** theory. It uses historical data from the past 40 years to extract decay characteristics and generates new tracks that respect the physics of energy limits over ocean and land.
+
+**Key Features:**
+* **Stochastic Generation:** Uses Markov Chains (`XX` matrices) to determine storm intensity changes.
+* **Physics-Aware:** Constrained by MPI fields derived from climatology.
+* **Decay Modeling:** Simulates intensity decay upon landfall using probabilistic decay factors.
+* **Validation:** Includes tools to compare synthetic return periods against historical IBTrACS data.
+
+---
+
+## 📂 Repository Structure
+
+```text
+Tropical-Cyclone-Stochastic-Model/
+├── data/                       # Contains all statistical matrices and track databases
+│   ├── LMItracks.pkl           # Historical storm tracks
+│   ├── XX, XX_fs, XX_nr...     # Transition probability matrices
+│   ├── mix_lognorm_ratio...    # Ratio distributions (Near Land/Sea)
+│   └── mpi_out/                # FOLDER: Contains NetCDF MPI maps (mpi_NA.nc, etc.)
+├── analysis/                   # Validation and Profiling
+│   ├── Intensity_Decay_Validation.ipynb
+│   ├── RMW_R34_distributions.ipynb
+│   └── Wind_Rain_Profile_Analysis.ipynb
+├── Final_Model.ipynb           # CORE: The main simulation engine
+├── requirements.txt            # Python dependencies
+└── README.md                   # This file
