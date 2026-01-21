@@ -1,4 +1,4 @@
-# Stochastic Tropical Cyclone Model (IRIS Foundations)
+# Stochastic Tropical Cyclone Model
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Status](https://img.shields.io/badge/Status-Academic_Research-orange)
