@@ -12,7 +12,7 @@
 
 ## 🌪️ Overview
 
-This repository contains the source code for the **Stochastic Tropical Cyclone Model**, developed to assess cyclone risk by generating synthetic storms based on historical statistics and physical constraints.
+This repository contains the source code of a **Stochastic Tropical Cyclone Model**, developed to assess cyclone risk by generating synthetic storms based on historical statistics and physical constraints.
 
 Unlike purely statistical models, this approach integrates the **Maximum Potential Intensity (MPI)** theory. It uses historical data from the past 40 years to extract decay characteristics and generates new tracks that respect the physics of energy limits over ocean and land.
 
