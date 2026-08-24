@@ -16,11 +16,6 @@ This repository contains the source code of a **Stochastic Tropical Cyclone Mode
 
 Unlike purely statistical models, this approach integrates the **Maximum Potential Intensity (MPI)** theory. It uses historical data from the past 40 years to extract decay characteristics and generates new tracks that respect the physics of energy limits over ocean and land.
 
-**Key Features:**
-* **Stochastic Generation:** Uses Markov Chains (`XX` matrices) to determine storm intensity changes.
-* **Physics-Aware:** Constrained by MPI fields derived from climatology.
-* **Decay Modeling:** Simulates intensity decay upon landfall using probabilistic decay factors.
-* **Validation:** Includes tools to compare synthetic return periods against historical IBTrACS data.
 
 ---
 
